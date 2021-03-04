@@ -23,10 +23,40 @@ layout: base
 </section>
 
 <section>
+  <h3 class="u-mb1">Cleaning</h3>
+
+  {% for post in collections.posts | reverse %}
+  {% if post.data.tag === 'cleaning' %}
+  {% include "postlist.njk" %}
+  {% endif %}
+  {% endfor %}
+</section>
+
+<section>
+  <h3 class="u-mb1">Software</h3>
+
+  {% for post in collections.posts | reverse %}
+  {% if post.data.tag === 'software' %}
+  {% include "postlist.njk" %}
+  {% endif %}
+  {% endfor %}
+</section>
+
+<section>
   <h3 class="u-mb1">Parts & modifications</h3>
 
   {% for post in collections.posts | reverse %}
   {% if post.data.tag === 'parts' %}
+  {% include "postlist.njk" %}
+  {% endif %}
+  {% endfor %}
+</section>
+
+<section>
+  <h3 class="u-mb1">Tools & Accessoires</h3>
+
+  {% for post in collections.posts | reverse %}
+  {% if post.data.tag === 'tools' %}
   {% include "postlist.njk" %}
   {% endif %}
   {% endfor %}
